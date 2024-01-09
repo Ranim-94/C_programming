@@ -16,8 +16,6 @@ Content:
     - however, keep in mind that altough that float* data_ptr = data_arr (some_pointer = array_name),
     pointers and array remains 2 different entities. each of them have different size 
         (we can use size of operator to demonstrate this)
-
-
 */
 
 
@@ -84,15 +82,6 @@ for (int i=0; i<ARRAY_SIZE; i++){
 printf("\t -> Size of array = %ld bytes | Size of pointer = %ld bytes \n ",sizeof(data_arr),sizeof(data_ptr));
 // note that we obtain different sizes for array and pointer indicating that indeed
 // pointer and arrays are different entities although they are related
-
-/*
-
-arrays and functions
-
-we saw that we can access an array using pointers
-so we can pass arrays to functions using pointers
-*/
-
 
 
 printf("\t\n===============================================\n \n ");

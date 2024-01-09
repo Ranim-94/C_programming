@@ -10,7 +10,7 @@ In this demo, we shall point out these differences
 Content:
 =========
     1- pass array to functions (array decaying to pointer phenomena) --> we see that when passing array to functions
-        arrays will be decayed to pointers
+       arrays will be decayed to pointers
     
     2- return an an array from a C function:
         In C, we can't return an array explictly, but we can use array and pointer relation
@@ -60,7 +60,7 @@ for (int i=0; i<ARRAY_SIZE; i++){
 
 } // End for loop filling content
 
-printf("\t\n -> Size of array used in the scope (before passing into a local function) = %d bytes \n",sizeof(arr_data));
+printf("\t\n -> Size of array used in the scope (before passing into a local function) = %ld bytes \n",sizeof(arr_data));
 
 // displaying the content
 print_array_v1(arr_data,ARRAY_SIZE);
@@ -88,7 +88,7 @@ for (int i=0; i<arr_size; i++){
 
 // print size of array used in this local function
 
-printf("\t\n -> Size of array used in local function = %d bytes \n",sizeof(some_arr));
+printf("\t\n -> Size of array used in local function = %ld bytes \n",sizeof(some_arr));
 // the size here is different from the size in the scope because the compiler 
 // parse it into a pointer of type float <=> float* ptr_some_arr
 

@@ -5,15 +5,16 @@
 #include"ptr_array_relation.h"
 #include "ptr_array_function.h"
 #include"array_as_return_type.h"
+#include"different_passes.h"
 
 // choose what demo to run
-#define DEMO_CHOICE 4 
+#define DEMO_CHOICE 1 
 
 int main(){
 
 printf("\t ============ Welcom to pointers fundamentals in C ============ \n ");
 
-int demo_list_choice[] = {0,1,2,3,4};
+int demo_list_choice[] = {0,1,2,3,4,5};
 
 int demo_to_run = demo_list_choice[DEMO_CHOICE];
 
@@ -41,6 +42,10 @@ case 3:
 case 4:
     // run array pointer function demo
     array_return_from_function_demo(); // demo #4
+
+case 5:
+    // run array pointer function demo
+    run_different_passes(); // demo #5
 
 default:
     break;

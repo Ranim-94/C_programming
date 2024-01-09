@@ -1,0 +1,42 @@
+
+
+C_Pointers idea:
+
+1) c_pointer_demo.c
+	-contains basic idea of pointers (declaring and initializing)
+	- using * operator (dereferencing) to access values hold by the pointer
+	- printing formatting
+
+2) ptr_array_relation.c
+	- relation between pointer and array
+	- assigning array to pointer <-> pointer = array_name
+	- access content of array using pointer name and index <-> 
+	  ptr_name[index] = array_name[index]
+	- keep in mind that array and pointers remain different entities <-> usage of
+	sizeof() operator
+	- in case of ptr_name = array_name, we don't need * to access elements of the array
+	
+3) ptr_array_function.c
+	- array are passed as argument to some function <-> we have a phenomena called
+	array decaying to pointers
+	- compiler decay array to pointer to prevent from copying all elements
+	
+4) array_as_return_type.c
+	
+	- several way to return pointer from a function
+	- 1st best way: declare an empty array in source, and pass it as argument to a function
+	 , compiler will decay array_name to a pointer in the function definition hence we will
+	 have array (in the source file) assigned and linked to the pointer in the function 
+	 definition
+	 - when we need to do what we want, the return of the function will directly modify the
+	 content of the declared array according to our function work
+	 
+5) dynamic_array.c
+	- usage of memory allocation malloc()
+	- also calloc() [cleaner (values are directly set to 0), but slower]
+	
+	
+	
+	
+	
+	

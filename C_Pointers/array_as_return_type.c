@@ -36,10 +36,10 @@ Content:
 
 // delcaring prototype local functions
 float* generate_array_fixed_value(float value);
-void generate_random_array_v1(float* array_ptr,size_t arr_size);
+void generate_random_array_v1_local(float* array_ptr,size_t arr_size);
 float* generate_random_array_v2(size_t arr_size);
 float* generate_random_array_v3(void);
-void display_array(float some_arr[], size_t arr_size);
+void display_array_local(float some_arr[], size_t arr_size);
 
 //============================ Start Source File ============================
 
@@ -101,9 +101,9 @@ by using this pointer, we can do whatever we want to our local declared array
 float arr_data[ARRAY_SIZE]; 
 
 // call the function of method 1: using array_name/pointer as argument 
-generate_random_array_v1(arr_data,ARRAY_SIZE);
+generate_random_array_v1_local(arr_data,ARRAY_SIZE);
 
-printf("\t\n -> Size of array used in the scope (before passing into a local function) = %d bytes \n",sizeof(arr_data));
+printf("\t\n -> Size of array used in the scope (before passing into a local function) = %ld bytes \n",sizeof(arr_data));
 
 printf("\t-> Display content of array using method 1 (using array_name/pointer as arguments in the function) \n");
 // displaying the content
@@ -121,7 +121,6 @@ display_array(arr_data_v2,ARRAY_SIZE); // call the helper function to display th
 free(arr_data_v2);
 
 // Method 3: using static keyword
-const int size_array_v3 = ARRAY_SIZE;
 float* arr_data_v3 = generate_random_array_v3();
 
 printf("\t-> Display content of array using method 3 (using static keyword) \n");
@@ -147,7 +146,8 @@ display_array(arr_data_v3,ARRAY_SIZE); // call the helper function to display th
 
 // ========================= Some local helper function ===========================
 
-// function method 0
+// function method 0 (uncomment the block if we want to run it)
+/*
 float* generate_array_fixed_value(float value){
 
 // declare some array
@@ -164,12 +164,14 @@ return array_local;
 
 } // End generate_array_fixed_value()
 
+*/
+
 
 // function method 1
-void generate_random_array_v1(float* array_ptr,size_t arr_size){
+void generate_random_array_v1_local(float* array_ptr,size_t arr_size){
 
 // by using this type of implementation, the array_ptr is pointing to some declared array
-// in the local main program
+// in the local main program (where this function is being called)
 
 // so we can generate random numbers each time we run the code
 srand(time(NULL));
@@ -183,8 +185,7 @@ for (int i=0; i<arr_size; i++){
 
 } // End for loop filling content
 
-
-} // End generate_random_array_v1()
+} // End generate_random_array_v1_local()
 
 // function method 2
 float* generate_random_array_v2(size_t arr_size){
@@ -235,7 +236,7 @@ return array_data_v3;
 
 
 // display content of some array
-void display_array(float some_arr[], size_t arr_size){
+void display_array_local(float some_arr[], size_t arr_size){
 
 printf("\t \n Printing content of array \n");
 
@@ -248,12 +249,12 @@ for (int i=0; i<arr_size; i++){
 
 // print size of array used in this local function
 
-printf("\t\n -> Size of array used in local function = %d bytes \n",sizeof(some_arr));
+printf("\t\n -> Size of array used in local function = %ld bytes \n",sizeof(some_arr));
 // the size here is different from the size in the scope because the compiler 
 // parse it into a pointer of type float <=> float* ptr_some_arr
 
 
-} // End print_array_v1()
+} // End display_array_local()
 
 
 
