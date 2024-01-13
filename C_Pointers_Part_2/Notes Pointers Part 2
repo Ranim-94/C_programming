@@ -1,0 +1,27 @@
+
+
+
+
+1- Conerning the compiler gcc:
+	gcc -g main.c -o prog
+
+-g: is the debug symbol
+
+
+2- we can also output the assembly file for the main.c using gcc
+	gcc -S main.c 
+this will output a file named main.S which contains the assembly representation of our C file.
+
+
+3- the tool objdump: this is a tool to inspect binary file (like the prog for example) . It can be very useful when debugging or trying to understand what is goig on during compilation process.
+
+  - Command to use it: objdump -t prog
+  	-t: for table, and prog is the input we give (the binary file)	
+
+
+4- Function pointer notions:
+ -function as variables, have addresses also
+ - definition: ability to store a function address of a specific function signature (declaration) -> encapsulate the behaviour of a function as pointer
+  - using these notions, we can implment our own OOP in C  
+ 
+	
