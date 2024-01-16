@@ -22,6 +22,15 @@ this will output a file named main.S which contains the assembly representation 
 4- Function pointer notions:
  -function as variables, have addresses also
  - definition: ability to store a function address of a specific function signature (declaration) -> encapsulate the behaviour of a function as pointer
-  - using these notions, we can implment our own OOP in C  
+  - using these notions, we can implment our own OOP in C 
+  
+  
+5 void pointers note:
+   -  void pointers: pointers that are not assoicated with any data type
+   - like any pointers, they also store addresses, and they can point (after assignment)
+    to any data type
+   -In C, we can't dereference a void pointer directly by using the * operator
+    We need to cast the void pointer to the correspondent pointer type, then dereferencing
+   - In C standard, we can't use pointer arithmetic, but some compiler do support this feature.
  
 	
