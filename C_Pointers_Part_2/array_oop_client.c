@@ -2,8 +2,6 @@
 
 #include"array_oop_client.h"
 
-
-
 void run_array_oop(void) {
 
 // the client source file in which we will use our emulated array class (oop_array.c/h)
