@@ -13,8 +13,11 @@ void run_char_ptr(void){
 
 // declaring a string literal using array <-> []
 char s1[] = "abcdef";
+// s1[0] = R (we can change this since s1 is an array)
 
 char* s2_ptr = "hello";
+// if we try to do s2_ptr[0] = R
+// it will give a compiler error
 
 // displaying entire string
 printf("\n --> Printing my entire string s1[] = %s \n",s1);
@@ -27,10 +30,15 @@ printf("\n --> size of string s1[] = %ld bytes \n",sizeof(s1));
 // 1 byte per char -> 7 bytes
 
 printf("\n --> size of string s2_ptr (ptr declar) = %ld bytes \n",sizeof(s2_ptr));
+// -> 8 byte since s2 is a pointer
 
 // assinging a new string to s2_ptr
 s2_ptr = "hello my new string";
 // this is a longer string <-> so logically a bigger memory
+// note: we can't do similar operation to s1[], such as
+// s1 = "other string", because s1 is an array
+// we need to use function such as strncopy() or something similar
+
 
 printf("\n --> Printing my entire string s2_ptr after assignment (ptr declar) = %s \n",s2_ptr);
 

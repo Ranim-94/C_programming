@@ -39,24 +39,27 @@ char my_char[] = "Hello"; // this is a character array
     (so it is not a recommended method)
 */
 
-// displayin the content
+// displaying the content
 printf("\n 1st element of my char array = %c \n",my_char[0]);
 // displaying entire string
 printf("\n Printing my entire string = %s \n",my_char);
 
 printf("\n Length of the string (without the null character) = %ld \n",strlen(my_char));
+// -> 5
 
 // modifying the character array
 my_char[0] = 'R';
 printf("\n 1st element of my char array after modification = %c \n",my_char[0]);
+// -> R
 
 printf("\n Printing my entire string after modification = %s \n",my_char);
+// -> it will print Rello (instead of Hello)
 
 
 // Exercice: A nice way about working with C string is to use the \0 and not the length
 // Example: print all 'l' found in my_char[]
 
-printf("\n Ex: finding the l character in my_char[] using \\0 \n \n");
+printf("\n Exercice: find the l character in my_char[] using \\0 \n \n");
 
 int index = 0;
 
