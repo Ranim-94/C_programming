@@ -11,7 +11,7 @@ typedef struct array{
 
 struct array* self; // pointer to the object itself
 // help us to keep track where my object is in memory
-// equivalent to this in C++ or slef in python in __init__() method
+// equivalent to (this->) in C++ or (self.) in python in __init__() method
 
 // Attributes
 float* data; // values
