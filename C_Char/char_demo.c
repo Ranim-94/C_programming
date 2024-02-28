@@ -5,6 +5,7 @@
     1- declaring char array
         - the hardest (array with size)
         - easiest (array with no size, \0 is inserted automatically)
+        - use pointer -> char*
 
     2- printing elements (char and entire string)
     3- print its length
@@ -22,7 +23,11 @@ void run_char_demo_1(void){
 
 // declaring some character array
 char my_char[] = "Hello"; // this is a character array
-// In this type of declaration, \0 is inserted automatically
+/*
+    1- the character array is also called string litteral
+    2-In this type of declaration, \0 is inserted automatically
+*/
+
 /*
     Other method:
     this equivalent to char my_char[6]; (declare the char array)
@@ -54,7 +59,6 @@ printf("\n 1st element of my char array after modification = %c \n",my_char[0]);
 
 printf("\n Printing my entire string after modification = %s \n",my_char);
 // -> it will print Rello (instead of Hello)
-
 
 // Exercice: A nice way about working with C string is to use the \0 and not the length
 // Example: print all 'l' found in my_char[]

@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include"char_demo.h"
 #include"char_ptr.h"
-#include"string_func_demo.h"
+#include"string_search_demo.h"
 
 // choose what demo to run
 #define DEMO_CHOICE 2
@@ -26,7 +26,7 @@ run_char_ptr(); // demo #1
 break;
 
 case 2:
-run_string_func(); // demo #2
+run_string_search(); // demo #2
 break;
 
 default:
