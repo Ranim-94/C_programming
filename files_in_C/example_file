@@ -1,0 +1,8 @@
+Hello, this is the 1st sentence 
+-> data = 5 
+-> Logging out array results 
+data # 0 = 1.5 
+data # 1 = 2.3 
+data # 2 = 2.3 
+data # 3 = 0.2 
+data # 4 = 2.7 
