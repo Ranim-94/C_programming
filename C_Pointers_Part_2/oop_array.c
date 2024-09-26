@@ -19,7 +19,7 @@ new_array->self = new_array;
 // allocate for the data
 new_array->data = (float*) malloc(sizeof(float)*capacity);
 
-// uodating a member field: setting capacity to size attribute
+// updating a member field: setting the size using capacity input argument
 new_array->size = capacity;
 
 // set up function pointers
