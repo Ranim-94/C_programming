@@ -1,8 +1,8 @@
 
 #pragma once
 
-extern struct person
-{
+/* 1st wat to initialize structures*/
+struct person{
     int age;
     int birth_year;
 
@@ -18,7 +18,7 @@ float y;
 float z;
 } vect3_t;
 
-extern vect3_t;
+// extern vect3_t;
 
 // declaring a logging function which print out the data fields of the strcut
 
