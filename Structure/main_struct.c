@@ -34,7 +34,7 @@ vect3_t my_vec = {.x = 1.2, .y = 2.3, .z = 3.4};
 // 1- {} initializer list using {}, to initialize the member fields
 // 2- name of the attribute using .x (.member_name)
 
-printf("\n ======== Priting info of my_vect struct ======== \n \n");
+printf("\n ======== Printing info of my_vect struct ======== \n \n");
 
 // displaying the coordinate on the console
 print_vect(&my_vec);

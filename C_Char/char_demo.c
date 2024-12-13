@@ -60,10 +60,10 @@ printf("\n 1st element of my char array after modification = %c \n",my_char[0]);
 printf("\n Printing my entire string after modification = %s \n",my_char);
 // -> it will print Rello (instead of Hello)
 
-// Exercice: A nice way about working with C string is to use the \0 and not the length
+// Exercise: A nice way about working with C string is to use the \0 and not the length
 // Example: print all 'l' found in my_char[]
 
-printf("\n Exercice: find the l character in my_char[] using \\0 \n \n");
+printf("\n Exercise: find the l character in my_char[] using \\0 \n \n");
 
 int index = 0;
 

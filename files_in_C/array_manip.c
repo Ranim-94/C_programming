@@ -1,8 +1,12 @@
 
 /*
-    Source file contains some useful function defintion for arrays,
+    Source file contains some useful function definition for arrays,
     such as displaying content, random generation,....
 */
+
+#include<stdio.h>
+#include<time.h> // for time
+#include<stdlib.h> // to use RAND_MAX, malloc(),...
 
 #include"array_manip.h"
 
@@ -10,7 +14,7 @@
 // display content of some array
 void display_array(float some_arr[], size_t arr_size){
 
-printf("\t \n Printing content of array \n");
+printf("\t \n Printing content of array \n\n");
 
 // print the content  of the array using array name and index 
 for (int i=0; i<arr_size; i++){
@@ -18,6 +22,8 @@ for (int i=0; i<arr_size; i++){
     printf("\t -> # %d = %f \n",i,some_arr[i]) ;
 
 } // End for loop printing
+
+printf("\t End printing array content \n \n");
 
 } // End display_array()
 

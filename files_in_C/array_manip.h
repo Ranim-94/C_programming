@@ -1,9 +1,7 @@
 
 
 #pragma once
-#include<stdio.h>
-#include<time.h> // for time
-#include<stdlib.h> // to use RAND_MAX
+#include <stddef.h>
 
 void display_array(float some_arr[], size_t arr_size);
 

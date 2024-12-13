@@ -13,7 +13,7 @@ void run_files_read(void){
 
 // fscanf: - it reads a file with some known formatting or convention
 // such as some file having 1 number per line, or 2 number per line,....
-// So in othter words, if we know that our file have some formatting,
+// So in other words, if we know that our file have some formatting,
 // fscanf is a good way to read it
 
 // - it reads line by line 

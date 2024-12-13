@@ -32,7 +32,7 @@ printf("\n --> size of string s1[] = %ld bytes \n",sizeof(s1));
 printf("\n --> size of string s2_ptr (ptr declar) = %ld bytes \n",sizeof(s2_ptr));
 // -> 8 byte since s2 is a pointer
 
-// assinging a new string to s2_ptr
+// Assigning a new string to s2_ptr
 s2_ptr = "hello my new string";
 // this is a longer string <-> so logically a bigger memory
 // note: we can't do similar operation to s1[], such as
@@ -47,3 +47,19 @@ printf("\n --> size of string s2_ptr  after assignment(ptr declar) = %ld bytes \
 
 
 } // End run_char_ptr()
+
+/*
+ * Some infos to keep in mind always:
+ *
+ * 1- We can't do reassignment in arrays in C
+ * because they are not as variable
+ * 	- they are bounded to the 1st address in the elements
+ *
+ *
+ * 2- On the other hand pointers are variables
+ * 	We can assign them to another memory places
+ * 	which contains some new elements
+ *
+ * */
+
+

@@ -34,7 +34,7 @@ Content:
 
 #define ARRAY_SIZE 5
 
-// delcaring prototype local functions
+// Declaring prototype local functions
 void print_array_v1(float some_arr[], size_t arr_size);
 
 //============================ Start Source File ============================

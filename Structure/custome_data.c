@@ -13,7 +13,8 @@ printf("Sam age is %d and its year of birth is %d \n ",my_person.age,my_person.b
 void print_datafields_PtrVersion(person_t* my_person){
 
 // Note that since we are using the pointer structure, we use the -> operator to access the fields
-printf("Sam age is %d and its year of birth is %d \n ",my_person->age,my_person->birth_year);
+printf("Sam age is %d and its year of birth is %d \n ",
+		my_person->age,my_person->birth_year);
 
 } // End print_datafields_PtrVersion()
 

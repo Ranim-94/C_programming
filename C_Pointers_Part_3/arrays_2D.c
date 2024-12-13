@@ -71,30 +71,49 @@ print_2D_array(array_2D,nb_row,nb_col);
     - memory: 2D dynamic arrays have more memory then stack 2D memory
     because they have also  pointers in them
 
-    - storage: dynamic 2D arrays are not continours in memory
-    whereas 2D stack array are continours in memory
+    - storage: dynamic 2D arrays are not continuous in memory
+    whereas 2D stack array are continuous in memory
 
 */
 
-int** array_dyn = malloc(sizeof(int*)*nb_row);
+float** array_dyn = malloc(sizeof(float*)*nb_row);
 // notice in sizeof() we have pointer of type int
 // we are allocating a series of pointers (we have nb_row 1D pointers)
 // so technically it is like we are allocating for rows
 
 // Now we allocate for column per row
-// here we are in row 0 (1st row)
-array_dyn[0]=malloc(sizeof(int)*nb_col);
+// here we are in row nb 0 (1st row)
+array_dyn[0]=malloc(sizeof(float)*nb_col);
 // array_dyn[0] = is 1D pointer
 
 // now continue allocating for the other rows, but this time using a for loop
 for (int i = 1 ; i<nb_row ; i++){
-    array_dyn[i]=malloc(sizeof(int)*nb_col);
+    array_dyn[i]=malloc(sizeof(float)*nb_col);
 
 } // End for()
 
 
 // TODO: fill the array with some numbers
 
+
+printf("\t - size of dynamic array = %zu \n",
+		sizeof(array_dyn));
+
+printf("\t - size of float = %zu \n",
+		sizeof(float));
+
+printf("\t - Nb of elements in dynamic array = %zu \n \n",
+		sizeof(array_dyn)/sizeof(float));
+
+float max_limit = 5.5;
+
+generate_random_2D_array(array_dyn,nb_row,nb_col, max_limit);
+
+
+printf("-> \t 2-Printing dynamic array content \n");
+printf("------------------------------------------\n\n");
+
+print_2D_heap_array(array_dyn,nb_row,nb_col);
 
 // free memory
 // 1st we free the rows (since we allocated them 1st)
